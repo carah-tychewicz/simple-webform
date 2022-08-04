@@ -29,11 +29,11 @@ const Form = () => {
         <form onSubmit={handleSubmit}>
           <div className='form-item'>
             <label>Full Name</label>
-            <input type='text' name='fullName' onChange={handleInputChange} value={inputs.fullName ?? ''} />
+            <input type='text' name='fullName' onChange={handleInputChange} value={inputs.fullName ?? ''} required />
           </div>
           <div className='form-item'>
             <label>Email</label>
-            <input type='text' name='email' onChange={handleInputChange} value={inputs.email ?? ''} />
+            <input type='text' name='email' onChange={handleInputChange} value={inputs.email ?? ''} required />
           </div>
           <div className='form-item'>
             <label>Address</label>
