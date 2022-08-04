@@ -1,0 +1,28 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding-top: 10rem;
+}
+
+.form-card {
+  background-color: white;
+  height: auto;
+  width: auto;
+  align-items: center;
+}
+
+.form-item {
+  flex-basis: auto;
+  text-align: left;
+  margin: 1rem;
+}
+
+.form-submit-btn {
+  margin-bottom: 1rem;
+}
+
+input {
+  margin-left: 1rem;
+  float: right;
+}
