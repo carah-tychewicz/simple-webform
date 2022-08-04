@@ -25,7 +25,7 @@ const Form = () => {
 
   return (
     <div className='container'>
-      <div className='form-card'>
+      <div className='card'>
         <form onSubmit={handleSubmit}>
           <div className='form-item'>
             <label>Full Name</label>
