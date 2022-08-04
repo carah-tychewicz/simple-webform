@@ -12,7 +12,7 @@ const Form = () => {
     if (event) {
       event.preventDefault();
       validate(inputs);
-      navigate('/thank-you', {state: inputs});
+      valid ? navigate('/thank-you', {state: inputs}) : alert('please enter a valid email');
     }
   }
   const handleInputChange = (event) => {
@@ -20,16 +20,18 @@ const Form = () => {
     setInputs(inputs => ({...inputs, [event.target.name]: event.target.value}));
   }
 
+  let valid = null;
+
   const validate = (check) => {
     const emailCond =  "^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$";
     console.log(emailCond);
-
-    console.log(check.email);
+    console.log(valid + ' before');
     if (!check.email.match(emailCond)) {
-      console.log('fail');
+      valid = false;
     } else {
-      console.log('pass');
+      valid = true;
     }
+    console.log(valid + ' after');
   };
 
   return (
