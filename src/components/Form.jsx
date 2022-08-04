@@ -1,15 +1,19 @@
 import './Form.css';
 import { useState } from 'react';
+import { useNavigate } from "react-router-dom";
 // Fields: Name, Email, Address, City, State, Zip
 
 const Form = () => {
 
   const [inputs, setInputs] = useState({});
 
+  const navigate = useNavigate();
+
   const handleSubmit = (event) => {
     if (event) {
       console.log(inputs);
       event.preventDefault();
+      navigate('/thank-you', {state: inputs});
     }
   }
   const handleInputChange = (event) => {

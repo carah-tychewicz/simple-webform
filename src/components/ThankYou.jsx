@@ -1,10 +1,13 @@
 import './ThankYou.css';
+import { useLocation } from 'react-router-dom';
 
-const ThankYou = (props) => {
+const ThankYou = () => {
+
+  const location = useLocation();
 
   return (
     <div>
-      <p>{props.fullName}</p>
+      <p>{location.state.fullName}</p>
     </div>
   )
 };
