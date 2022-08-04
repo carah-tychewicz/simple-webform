@@ -1,7 +1,6 @@
 import './Form.css';
 import { useState } from 'react';
 import { useNavigate } from "react-router-dom";
-import { toHaveErrorMessage } from '@testing-library/jest-dom/dist/matchers';
 // Fields: Name, Email, Address, City, State, Zip
 
 const Form = () => {
@@ -22,18 +21,17 @@ const Form = () => {
     setInputs(inputs => ({...inputs, [event.target.name]: event.target.value}));
   }
 
-  const validate = () => {
-    let err = {};
-    if (inputs.email) {
-      console.log('test')
-      const emailCond = "/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:.[a-zA-Z0-9-]+)*$/";
-      if (!inputs.email.match(emailCond)) {
-        err.email = 'add valid email'
-      }
+  const validate = (check) => {
+    console.log(check);
+    console.log(check.email);
+    const emailCond =  "/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:.[a-zA-Z0-9-]+)*$/";
+    console.log(emailCond);
+    if (!check.email.match(emailCond)) {
+      console.log('fail');
+    } else {
+      console.log('pass');
     }
-    
-    err.email ? console.log(err.email + ' success') : console.log('failure');
-  }
+  };
 
   return (
     <div className='container'>
