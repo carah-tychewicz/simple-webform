@@ -1,15 +1,19 @@
 import './Form.css';
 import { useState } from 'react';
+import { useNavigate } from "react-router-dom";
 // Fields: Name, Email, Address, City, State, Zip
 
 const Form = () => {
 
   const [inputs, setInputs] = useState({});
 
+  const navigate = useNavigate();
+
   const handleSubmit = (event) => {
     if (event) {
       console.log(inputs);
       event.preventDefault();
+      navigate('/thank-you', {state: inputs});
     }
   }
   const handleInputChange = (event) => {
@@ -21,8 +25,8 @@ const Form = () => {
 
   return (
     <div className='container'>
-      <div className='form-card'>
-        <form onSubmit={handleSubmit} className='form-col'>
+      <div className='card'>
+        <form onSubmit={handleSubmit}>
           <div className='form-item'>
             <label>Full Name</label>
             <input type='text' name='fullName' onChange={handleInputChange} value={inputs.fullName ?? ''} />
