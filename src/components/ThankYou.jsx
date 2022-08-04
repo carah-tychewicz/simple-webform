@@ -19,7 +19,7 @@ const ThankYou = () => {
           </div>
         </div>
         <div className="return-home">
-          <a href='/'><p>Return to form</p></a>
+          <a href='/'><p>Return to form!</p></a>
         </div>
       </div>
     </div>
