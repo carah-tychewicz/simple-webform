@@ -24,14 +24,7 @@ const Form = () => {
 
   const validate = (check) => {
     const emailCond =  "^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$";
-    console.log(emailCond);
-    console.log(valid + ' before');
-    if (!check.email.match(emailCond)) {
-      valid = false;
-    } else {
-      valid = true;
-    }
-    console.log(valid + ' after');
+    !check.email.match(emailCond) ? valid = false : valid = true;
   };
 
   return (
