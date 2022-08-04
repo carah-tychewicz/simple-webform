@@ -2,8 +2,16 @@ import './Form.css';
 
 const Form = () => {
   return (
-    <div>
-      <p>test</p>
+    <div className='container'>
+      <div className='form-card'>
+        <form>
+          <div>
+            <label>test</label>
+            <input type='text' name='test' />
+          </div>
+          <button type='submit'>Submit</button>
+        </form>
+      </div>
     </div>
   )
 }

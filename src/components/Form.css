@@ -1,0 +1,13 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding-top: 10rem;
+}
+
+.form-card {
+  flex-direction: column;
+  background-color: white;
+  height: 40rem;
+  width: 30rem;
+}
