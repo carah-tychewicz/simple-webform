@@ -1,10 +1,10 @@
 import './ThankYou.css';
 
-const ThankYou = () => {
+const ThankYou = (props) => {
 
   return (
     <div>
-      <p>test</p>
+      <p>{props.fullName}</p>
     </div>
   )
 };

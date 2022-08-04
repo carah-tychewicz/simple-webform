@@ -22,7 +22,7 @@ const Form = () => {
   return (
     <div className='container'>
       <div className='form-card'>
-        <form onSubmit={handleSubmit} className='form-col'>
+        <form onSubmit={handleSubmit}>
           <div className='form-item'>
             <label>Full Name</label>
             <input type='text' name='fullName' onChange={handleInputChange} value={inputs.fullName ?? ''} />
