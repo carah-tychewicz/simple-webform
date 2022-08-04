@@ -8,3 +8,10 @@
   width: auto;
   align-items: center;
 }
+
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding-top: 10rem;
+}
