@@ -18,6 +18,9 @@ const ThankYou = () => {
             <p>{location.state.city}, {location.state.state} {location.state.zip}</p>
           </div>
         </div>
+        <div className="return-home">
+          <a href='/'><p>Return to form</p></a>
+        </div>
       </div>
     </div>
   )

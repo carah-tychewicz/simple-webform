@@ -8,6 +8,8 @@ const Form = () => {
   const [inputs, setInputs] = useState({});
   const navigate = useNavigate();
 
+  let valid = null;
+
   const handleSubmit = (event) => {
     if (event) {
       event.preventDefault();
@@ -19,8 +21,6 @@ const Form = () => {
     event.persist();
     setInputs(inputs => ({...inputs, [event.target.name]: event.target.value}));
   }
-
-  let valid = null;
 
   const validate = (check) => {
     const emailCond =  "^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$";
