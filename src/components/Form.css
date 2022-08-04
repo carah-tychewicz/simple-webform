@@ -6,8 +6,25 @@
 }
 
 .form-card {
+  display: flex;
   flex-direction: column;
   background-color: white;
-  height: 40rem;
+  height: auto;
   width: 30rem;
+  align-items: center;
+}
+
+.form-item {
+  margin: 1rem;
+  display: flex;
+  flex-direction: row;
+  text-align: left;
+}
+
+.form-submit-btn {
+  margin-bottom: 1rem;
+}
+
+input {
+  margin-left: 1rem;
 }
