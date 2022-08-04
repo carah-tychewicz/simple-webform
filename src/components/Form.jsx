@@ -10,7 +10,6 @@ const Form = () => {
 
   const handleSubmit = (event) => {
     if (event) {
-      console.log(inputs);
       event.preventDefault();
       validate(inputs);
       navigate('/thank-you', {state: inputs});
@@ -22,10 +21,10 @@ const Form = () => {
   }
 
   const validate = (check) => {
-    console.log(check);
-    console.log(check.email);
-    const emailCond =  "/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:.[a-zA-Z0-9-]+)*$/";
+    const emailCond =  "^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$";
     console.log(emailCond);
+
+    console.log(check.email);
     if (!check.email.match(emailCond)) {
       console.log('fail');
     } else {
