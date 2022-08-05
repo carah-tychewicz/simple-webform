@@ -34,14 +34,14 @@ const Form = () => {
 
   return (
     <div className='container'>
-      <div className='card'>
+      <div className='details-card'>
         <h1 className='instructions'>Enter Details Here</h1>
         <form onSubmit={handleSubmit}>
           <div className='form-item'>
-            <input type='text' placeholder='Full Name' name='fullName' maxLength='50' onChange={handleInputChange} value={inputs.fullName ?? ''} required />
+            <input type='text' placeholder='Full Name (required)' name='fullName' maxLength='50' onChange={handleInputChange} value={inputs.fullName ?? ''} required />
           </div>
           <div className='form-item'>
-            <input type='text' placeholder='Email' name='email' maxLength='50' onChange={handleInputChange} value={inputs.email ?? ''} required />
+            <input type='text' placeholder='Email (required)' name='email' maxLength='50' onChange={handleInputChange} value={inputs.email ?? ''} required />
           </div>
           <div className='form-item'>
             <input type='text' placeholder='Address Line 1' name='addressLineOne' maxLength='50' onChange={handleInputChange} value={inputs.addressLineOne ?? ''} />

@@ -7,7 +7,7 @@ const ThankYou = () => {
 
   return (
     <div className='container'>
-      <div className='card'>
+      <div className='thankyou-card'>
         <div className='submission-details'>
           <h1>Thank you, {location.state.fullName}!</h1>
           <h2>Your submission details:</h2>

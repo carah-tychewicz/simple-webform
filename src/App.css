@@ -2,10 +2,3 @@
   display: flex;
   justify-content: center;
 }
-
-.card {
-  width: 30rem;
-  padding: 1rem;
-  background-color: white;
-  margin: 1rem;
-}
