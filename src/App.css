@@ -1,6 +1,13 @@
 .container {
+  height: 800px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .card {
+  width: 30rem;
+  padding: 1rem;
   background-color: white;
+  margin: 1rem;
 }
