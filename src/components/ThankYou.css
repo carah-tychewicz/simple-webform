@@ -6,3 +6,14 @@
   float: right;
   margin-right: 1rem;
 }
+
+.thankyou-card {
+  text-align: left;
+  width: 40rem;
+  padding: 1rem;
+  background-color: white;
+  margin: 15rem 1rem 1rem 1rem;
+  border-radius: 1rem;
+  border: 3px solid goldenrod;
+  filter: drop-shadow(6px 6px 8px black);
+}
