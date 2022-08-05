@@ -46,11 +46,11 @@ const Form = () => {
           </div>
           <div className='form-item'>
             <label>Address Line 1</label>
-            <input type='text' name='address' maxLength='50' onChange={handleInputChange} value={inputs.address ?? ''} />
+            <input type='text' name='addressLineOne' maxLength='50' onChange={handleInputChange} value={inputs.addressLineOne ?? ''} />
           </div>
           <div className='form-item'>
             <label>Address Line 2</label>
-            <input type='text' name='address' maxLength='50' onChange={handleInputChange} value={inputs.address ?? ''} />
+            <input type='text' name='addressLineTwo' maxLength='50' onChange={handleInputChange} value={inputs.addressLineTwo ?? ''} />
           </div>
           <div className='form-item'>
             <label>City</label>

@@ -14,7 +14,8 @@ const ThankYou = () => {
           <div>
             <p>{location.state.fullName}</p>
             <p>{location.state.email}</p>
-            <p>{location.state.address}</p>
+            <p>{location.state.addressLineOne}</p>
+            <p>{location.state.addressLineTwo}</p>
             <p>{location.state.city}, {location.state.state} {location.state.zip}</p>
           </div>
         </div>
