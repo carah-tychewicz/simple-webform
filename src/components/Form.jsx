@@ -1,7 +1,6 @@
 import './Form.css';
 import { useState } from 'react';
 import { useNavigate } from "react-router-dom";
-// Fields: Name, Email, Address, City, State, Zip
 
 const Form = () => {
 
@@ -12,6 +11,7 @@ const Form = () => {
     if (event) {
       event.preventDefault();
       validate(inputs);
+      console.log(inputs);
     }
   }
   const handleInputChange = (event) => {
