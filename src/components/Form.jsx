@@ -6,14 +6,12 @@ import { useNavigate } from "react-router-dom";
 const Form = () => {
 
   const [inputs, setInputs] = useState({});
-
   const navigate = useNavigate();
 
   const handleSubmit = (event) => {
     if (event) {
-      console.log(inputs);
       event.preventDefault();
-      navigate('/thank-you', {state: inputs});
+      validate(inputs);
     }
   }
   const handleInputChange = (event) => {
@@ -21,7 +19,18 @@ const Form = () => {
     setInputs(inputs => ({...inputs, [event.target.name]: event.target.value}));
   }
 
+  const validate = (check) => {
+    const emailCond =  "^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$";
+    const zipCond = "^[0-9]{0,6}$";
 
+    if (!check.email.match(emailCond)) {
+      alert('please enter a valid email');
+    } else if (!check.zip.match(zipCond)) {
+      alert('please enter a valid zip code');
+    } else {
+      navigate('/thank-you', {state: inputs});
+    };
+  };
 
   return (
     <div className='container'>
@@ -29,27 +38,31 @@ const Form = () => {
         <form onSubmit={handleSubmit}>
           <div className='form-item'>
             <label>Full Name</label>
-            <input type='text' name='fullName' onChange={handleInputChange} value={inputs.fullName ?? ''} />
+            <input type='text' name='fullName' maxLength='50' onChange={handleInputChange} value={inputs.fullName ?? ''} required />
           </div>
           <div className='form-item'>
             <label>Email</label>
-            <input type='text' name='email' onChange={handleInputChange} value={inputs.email ?? ''} />
+            <input type='text' name='email' maxLength='50' onChange={handleInputChange} value={inputs.email ?? ''} required />
           </div>
           <div className='form-item'>
-            <label>Address</label>
-            <input type='text' name='address' onChange={handleInputChange} value={inputs.address ?? ''} />
+            <label>Address Line 1</label>
+            <input type='text' name='address' maxLength='50' onChange={handleInputChange} value={inputs.address ?? ''} />
+          </div>
+          <div className='form-item'>
+            <label>Address Line 2</label>
+            <input type='text' name='address' maxLength='50' onChange={handleInputChange} value={inputs.address ?? ''} />
           </div>
           <div className='form-item'>
             <label>City</label>
-            <input type='text' name='city' onChange={handleInputChange} value={inputs.city ?? ''} />
+            <input type='text' name='city' maxLength='50' onChange={handleInputChange} value={inputs.city ?? ''} />
           </div>
           <div className='form-item'>
             <label>State</label>
-            <input type='text' name='state' onChange={handleInputChange} value={inputs.state ?? ''} />
+            <input type='text' name='state' maxLength="20" onChange={handleInputChange} value={inputs.state ?? ''} />
           </div>
           <div className='form-item'>
             <label>Zip Code</label>
-            <input type='text' name='zip' onChange={handleInputChange} value={inputs.zip ?? ''} />
+            <input type='text' name='zip' maxLength='5' onChange={handleInputChange} value={inputs.zip ?? ''} />
           </div>
           <button className='form-submit-btn' type='submit'>Submit</button>
         </form>

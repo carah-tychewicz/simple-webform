@@ -1,3 +1,8 @@
 .submission-details {
   margin: 1rem;
 }
+
+.return-home {
+  float: right;
+  margin-right: 1rem;
+}
